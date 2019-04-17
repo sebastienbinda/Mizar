@@ -306,7 +306,7 @@ define([
             var isInTimeDimension = time.isInTimeDefinition(
                 this.getDimensions().time.value
             );
-            value = isInTimeDimension ? time.getDisplayValue() : null;
+            value = isInTimeDimension ? time.date.toISOString() : null;
             this.allowedHTTPRequest = value !== null;
         } else if (param === "time") {
             mustBeRefreshed = false;
